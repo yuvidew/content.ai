@@ -1,6 +1,8 @@
 import { v } from "convex/values";
 import {mutation , query} from "./_generated/server";
 import {Doc , Id} from "./_generated/dataModel";
+import { category } from "./Category";
+
 
 export const create = mutation({
     args : {
@@ -26,8 +28,11 @@ export const create = mutation({
         })
 
         return document
+
     },
 })
+
+
 
 export const addContents = mutation({
     args : {

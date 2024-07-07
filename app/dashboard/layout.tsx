@@ -1,12 +1,12 @@
 'use client'
 
 import Spinner from '@/components/Spinner'
-import { useConvexAuth } from 'convex/react'
+import { useConvexAuth } from 'convex/react' 
 import { redirect } from 'next/navigation'
 import React from 'react'
 import { MenuBar } from './_components/MenuBar'
 
-export default function layout({
+export default function DashboardLayout({
     children,
 }: Readonly<{
     children:React.ReactNode
