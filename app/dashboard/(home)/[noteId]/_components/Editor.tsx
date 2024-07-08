@@ -3,15 +3,16 @@ import '@toast-ui/editor/dist/toastui-editor.css';
 import { Editor } from '@toast-ui/react-editor';
 
 interface props {
-    content : string
+    content : string,
 }
 
-export const EditorComp = ({content}:props) => {
+export const EditorComp: React.FC<props> = ({content}) => {
     const editorRef:any = useRef();
 
     useEffect(() => {
         const editorInstance = editorRef.current.getInstance();
         editorInstance.setMarkdown(content)
+        // onCopy(navigator.clipboard.writeText(content))
     } , [content])
 
     return (

@@ -77,7 +77,7 @@ export const Hero:React.FC = () => {
                 )}
 
             </section>
-            <section className=' grid grid-cols-4 gap-4 mb-[2rem]'>
+            <section className=' grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 mb-[2rem]'>
                 {cardArray.map((ele , index) => (
                     <Card key={index} className=' shadow-md'>
                         <CardHeader className=' flex-col items-start gap-2'>

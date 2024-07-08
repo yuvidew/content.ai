@@ -20,6 +20,7 @@ export const ContentList: React.FC<props> = ({id , onContent}) => {
     const NoteById = useQuery(api.documents.getById , {
         noteId : id
     })
+    
     return (
         <section className=' h-[30rem]   overflow-y-auto'>
             <Accordion type="single" collapsible className=" ">
