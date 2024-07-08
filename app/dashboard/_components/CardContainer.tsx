@@ -115,13 +115,13 @@ export const CardContainer: React.FC<props> = ({
     }
 
     return (
-        <div className=' grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-x-3 gap-y-1 overflow-y-auto mt-[2rem] h-[70vh]'>
+        <div className=' grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-x-3 gap-y-1 '>
             {cardData.map((ele:any) => (
-                <Card key={ele._id} className='h-[15rem] border'>
+                <Card key={ele._id} className=''>
                     <Link href={`/dashboard/${ele._id}`}>
                         <CardHeader className=''>
                             <CardTitle 
-                                    className=' font-medium text-purple-500 py-1.5 px-4 rounded-full capitalize bg-purple-200 bg-opacity-40 text-[.8rem]'
+                                    className=' font-medium text-purple-500 py-1.5 px-4 rounded-full capitalize bg-purple-200 bg-opacity-40 text-[.7rem]'
                                 >
                                     {ele.category}
                             </CardTitle>

@@ -9,7 +9,7 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog"
 import { Plus } from "lucide-react";
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import {
     Select,
     SelectContent,
@@ -18,7 +18,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { Button } from "@/components/ui/button";
-import { useMutation } from "convex/react";
+import { useMutation, useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation"
@@ -33,11 +33,27 @@ interface Props {
 
 export const CreateContent: React.FC<Props> = ({children}) => {
     const router = useRouter()
+    const getAllNote = useQuery(api.documents.getNote)
+    const [allCategory , setAllCategory] = useState<any>([])
     const [isLoading , setIsLoading] = useState(false)
     const [theCategory , setTheCategory] = useState<any>({
         category : "",
         aiPrompt : ""
     })
+
+    useEffect(() => {
+        const compareObjects = (obj1: any , obj2: any): boolean => {
+            return obj1.category !== obj2.category;
+        };
+
+        if(getAllNote != undefined && getAllNote.length !== 0){
+            
+            const uniqueElements:any = category.filter((obj1) => getAllNote.some((obj2):any => compareObjects(obj1, obj2))) 
+    
+            setAllCategory(uniqueElements)
+        }
+    } ,[getAllNote])
+
 
     const create = useMutation(api.documents.create)
 
@@ -81,7 +97,11 @@ export const CreateContent: React.FC<Props> = ({children}) => {
                         <SelectValue className=" placeholder:text-purple-800"  placeholder="Content category..." />
                     </SelectTrigger>
                     <SelectContent>
-                        {category.map((ele , index) => (
+
+                        {allCategory.length == 0 ? (
+                            <h3>Loading...</h3>
+                        ): 
+                        allCategory.map((ele:any , index:string):any => (
                             <SelectItem key={index} value={index.toString()}>{ele.category}</SelectItem>
                         ))}
                     </SelectContent>

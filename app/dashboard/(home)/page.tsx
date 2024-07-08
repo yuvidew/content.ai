@@ -13,23 +13,23 @@ export default function DashBoardHome(){
     return (
         <div className="w-full">
             <Header/>
-            <section className=" container mt-[2rem]">
+            <section className=" container mt-[2rem]  ">
                 <Tabs defaultValue="all" className="w-full">
                     <TabsList>
                         <TabsTrigger value="all">All Content  <span className=" ml-2">({getAllNote?.length})</span></TabsTrigger>
                         <TabsTrigger value="saved">Saved Content <span className=" ml-2">({getSavedNote?.length})</span></TabsTrigger>
                         <TabsTrigger value="favorite">Favorite Content  <span className=" ml-2">({getFavoriteNote?.length})</span></TabsTrigger>
                     </TabsList>
-                    <TabsContent value="all">
-                        <CardContainer  cardData={getAllNote} />
+                    <TabsContent value="all" className=" h-[70vh] mt-[1rem] overflow-y-auto ">
+                        <CardContainer cardData={getAllNote} />
                     </TabsContent>
-                    <TabsContent value="saved">
+                    <TabsContent value="saved" className=" h-[70vh] mt-[1rem] overflow-y-auto ">
                         <CardContainer 
                             cardData={getSavedNote} 
                             text={"Empty saved note..."} 
                         />
                     </TabsContent>
-                    <TabsContent value="favorite">
+                    <TabsContent value="favorite" className=" h-[70vh] mt-[1rem] overflow-y-auto ">
                         <CardContainer cardData={getFavoriteNote}  
                             text={"Empty favorite note..."} 
                         />
