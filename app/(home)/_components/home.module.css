@@ -1,5 +1,5 @@
 .hero{
-    background: url('../../../public/home.jpg') , no-repeat;
+    background: linear-gradient(to top , #ffffff , #ffffff00) , url('../../../public/home.jpg') , no-repeat;
     background-position: center;
     background-size: cover;
 }

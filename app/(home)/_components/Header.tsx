@@ -13,7 +13,7 @@ import { ToolTipProvider } from '@/components/Providers/ToolTipProvider'
 export const Header: React.FC = () => {
     const {isAuthenticated , isLoading} = useConvexAuth()
     return (
-        <header className=' flex items-center justify-center h-[6rem] w-full'>
+        <header className=' flex items-center justify-center h-[6rem] w-full fixed top-0 left-1/2 transform -translate-x-1/2  w-full z-50  container m-auto'>
             <main className=' w-full flex items-center justify-between bg-stone-50 h-[70%] rounded-lg p-2 shadow-lg px-5'>
                 <Logo classText='lg:block hidden' />
                 <div className=' w-full flex items-center lg:justify-end justify-between gap-4'>
