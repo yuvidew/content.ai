@@ -59,9 +59,9 @@ export const Section: React.FC<props> = ({id}) => {
                 />
                 <MobileAskFromProvider classText = {"lg:hidden block"}>
                     <Tabs defaultValue="ask query" className="w-full">
-                        <TabsList>
-                            <TabsTrigger value="ask query">Ask Query</TabsTrigger>
-                            <TabsTrigger value="your query list">Your Query List</TabsTrigger>
+                        <TabsList className='w-full mt-2'>
+                            <TabsTrigger value="ask query" className='w-full'>Ask Query</TabsTrigger>
+                            <TabsTrigger value="your query list" className='w-full'>Your Query List</TabsTrigger>
                         </TabsList>
                         <TabsContent value="ask query" className='w-full'>
                             

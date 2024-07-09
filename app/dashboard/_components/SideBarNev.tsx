@@ -16,7 +16,7 @@ export const SideBarNev:React.FC<props> = ({children}) => {
         <Sheet  >
             <SheetTrigger>
                 <Button size={"icon"} variant={"mixBg"}>
-                    <LayoutGrid />
+                    <LayoutGrid className='w-5 h-5' />
                 </Button>
             </SheetTrigger>
             <SheetContent side={"left"} className='p-0'>

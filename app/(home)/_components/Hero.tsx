@@ -45,8 +45,8 @@ export const Hero:React.FC = () => {
     return (
         <>
             <section className=' flex items-center justify-center flex-col gap-3 py-5 h-[35rem] pt-[8rem]'>
-                <h2 className=' text-[1.3rem] text-stone-800 opacity-65 '>AI Content Generator</h2>
-                <h1 className=' capitalize text-stone-800 opacity-90 lg:text-[3.5rem] md:text-[2.5rem] sm:text-[1.8rem] text-[1.9rem] font-bold w-[80%] text-center'>
+                <h2 className=' lg:text-[1.3rem] md:text-[1.2rem] sm:text-[1rem] text-[.9rem] text-stone-800 opacity-65 '>AI Content Generator</h2>
+                <h1 className=' capitalize text-stone-800 opacity-90 lg:text-[3.5rem] md:text-[2.5rem] sm:text-[1.8rem] text-[1.7rem] font-bold w-[80%] text-center'>
                     Elevate Your <span className=' text-purple-700 underline'>Content</span> dominate search engines
                 </h1>
                 {isLoading && (

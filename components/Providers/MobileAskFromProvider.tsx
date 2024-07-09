@@ -17,10 +17,11 @@ export const MobileAskFromProvider: React.FC<props> = ({children , classText}) =
 
   return (
     <Drawer >
-      <DrawerTrigger className={`${classText} w-full mt-2`}>
+      <DrawerTrigger className={`${classText} w-full mt-4`}>
         <Button className=' w-full' size={"sm"} variant={"mixBg"}>
           Ask your Query <MessageCircleQuestion className=' ml-2 h-5 w-5' />
         </Button>
+        <br />
         <br />
       </DrawerTrigger>
       <DrawerContent  className={`${classText} px-5 py-1 pb-4 `}>

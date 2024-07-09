@@ -58,7 +58,7 @@ export const CardContainer: React.FC<props> = ({
         return (
             <div className=' grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-3 mt-[2rem]'>
                 {[1 ,2 ,3 ,4 ,5].map((ele) => (
-                        <Skeleton key={ele} className=" h-[15rem] rounded-md" />
+                    <Skeleton key={ele} className=" h-[15rem] rounded-md" />
                 ))}
             </div>
         )
@@ -68,8 +68,8 @@ export const CardContainer: React.FC<props> = ({
         return (
             <div className=' w-full  h-[60vh] flex items-center justify-center'>
                 <div className='flex items-center justify-center flex-col gap-4'>
-                    <PackageOpen className=' h-[6rem] w-[6rem] opacity-60 text-center' />
-                    <h3 className=' opacity-85 text-[1.2rem]'>{text}</h3>
+                    <PackageOpen className=' h-[5rem] w-[5rem] opacity-60 text-center' />
+                    <h3 className=' opacity-85 text-[.8rem]'>{text}</h3>
                 </div>
             </div>
         )
@@ -127,7 +127,7 @@ export const CardContainer: React.FC<props> = ({
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className='opacity-60' >There is no better advertisement campaign that is low cost and also successful at teh same time</p>
+                            <p className='opacity-60 text-[.9rem]' >There is no better advertisement campaign that is low cost and also successful at teh same time</p>
                         </CardContent>
                     </Link>
                     <CardFooter className='pb-1.5'>
