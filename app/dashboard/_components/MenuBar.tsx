@@ -23,28 +23,28 @@ export const MenuBar = () => {
                 />
             </div>
             <main className='py-6 w-[80%] m-auto'>
-                <h3 className=' mb-[2rem] opacity-55 ' >Menu</h3>
+                <h3 className=' lg:mb-[2rem] mb-[1.5rem] opacity-55 ' >Menu</h3>
                 <ul className=''>
                     <li className=' mb-4'>
                         <Link 
                             href={'/dashboard'}  
                             className={
-                                cn(' flex items-center gap-2 py-2 px-3 rounded-md border-l-8 ' , 
+                                cn(' flex items-center gap-2 lg:py-2 md:py-2 py-1.5 px-3 rounded-md border-l-8 ' , 
                                     route == "/dashboard" || route.includes("/dashboard") ? 
                                     "bg-stone-200 text-purple-700  border-l-purple-700"
                                     : " bg-white opacity-50"
                                 )
                             }
                         >
-                            <Home className=' h-5 w-5' />
-                            <h2 className = "text-[.9rem]">Home</h2>
+                            <Home className=' lg:h-5 lg:w-5 h-4 w-4' />
+                            <h2 className = "lg:text-[.9rem] text-[.8rem]">Home</h2>
                         </Link>
                     </li>
                     <li className=' mb-4'>
                         <Link 
                             href={'/dashboard/saved'}  
                             className={
-                                cn(' flex items-center justify-between gap-2 py-2 px-3 rounded-md border-l-8 ' , 
+                                cn(' flex items-center justify-between gap-2 lg:py-2 md:py-2 py-1.5 px-3 rounded-md border-l-8 ' , 
                                     route.includes("/saved") ? 
                                     "bg-stone-200 text-purple-700  border-l-purple-700  "
                                     : " bg-white  text-stone-500"
@@ -52,18 +52,18 @@ export const MenuBar = () => {
                             }
                         >
                             <div className=' flex items-center gap-2'>
-                                <Bookmark className=' h-5 w-5' />
-                                <h2 className = "text-[.9rem]">Saved Content 
+                                <Bookmark className=' lg:h-5 lg:w-5 h-4 w-4' />
+                                <h2 className = "lg:text-[.9rem] text-[.8rem]">Saved Content 
                                 </h2>
                             </div>
-                            <span className=' ml-2'>({getSavedNote?.length})</span>
+                            <span className=' ml-2 lg:text-[.9rem] text-[.8rem]'>({getSavedNote?.length})</span>
                         </Link>
                     </li>
                     <li className=' mb-4'>
                         <Link 
                             href={'/dashboard/favorite'}  
                             className={
-                                cn(' flex items-center justify-between gap-2 py-2 px-3 rounded-md border-l-8 ' , 
+                                cn(' flex items-center justify-between gap-2 lg:py-2 md:py-2 py-1.5 px-3 rounded-md border-l-8 ' , 
                                     route.includes("/favorite") ? 
                                     "bg-stone-200 text-purple-700  border-l-purple-700"
                                     : " bg-white text-stone-500"
@@ -71,25 +71,25 @@ export const MenuBar = () => {
                             }
                         >
                             <div className=' flex items-center gap-2'>
-                                <Star className=' h-5 w-5' />
-                                <h2 className = "text-[.9rem]">My Favorite </h2>
+                                <Star className=' lg:h-5 lg:w-5 h-4 w-4' />
+                                <h2 className = "lg:text-[.9rem] text-[.8rem]">My Favorite </h2>
                             </div>
-                            <span className=' ml-2'>({getFavoriteNote?.length})</span>
+                            <span className=' ml-2 lg:text-[.9rem] text-[.8rem]'>({getFavoriteNote?.length})</span>
                         </Link>
                     </li>
                 </ul>
                 <br />
             </main>
-            <main className='py-6 w-[80%] m-auto border-t-2 border-t-stone-300'>
+            <main className='lg:py-6 pt-5 w-[80%] lg:h-[20%] sm:h-[50%] h-[10%] m-auto border-t-2 border-t-stone-300'>
                 <h3 className='  mb-[2rem] opacity-55 ' >Generale</h3>
                 <ul>
                     <li className=' flex items-center gap-3 opacity-65 mb-4'>
-                        <CircleAlert className=' h-5 w-5' />
-                        <span>Support & Help</span>
+                        <CircleAlert className=' lg:h-5 h-4  lg:w-5  w-4' />
+                        <span className=' lg:text-[.9rem] text-[.8rem]'>Support & Help</span>
                     </li>
                     <li className=' flex items-center gap-3 opacity-65 mb-4'>
-                        <Settings className=' h-5 w-5' />
-                        <span>Settings</span>
+                        <Settings className=' lg:h-5 h-4  lg:w-5  w-4' />
+                        <span className=' lg:text-[.9rem] text-[.8rem]'>Settings</span>
                     </li>
                 </ul>
             </main>
