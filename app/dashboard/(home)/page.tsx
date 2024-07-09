@@ -17,7 +17,7 @@ export default function DashBoardHome(){
             <Header/>
             <section className=" container mt-[2rem]  ">
                 <Tabs defaultValue="all" className="w-full ">
-                    <TabsList className="w-full">
+                    <TabsList className="lg:w-[33rem] sm:w-full ">
                         <TabsTrigger value="all" className=" w-full lg:text-[.9rem] md:text-[.8rem] sm:text-[.7rem] text-[.65rem]" >All Content  <span className="ml-[.9px]">({getAllNote?.length})</span></TabsTrigger>
                         <TabsTrigger value="saved" className=" w-full lg:text-[.9rem] md:text-[.8rem] sm:text-[.7rem] text-[.65rem]" >Saved Content <span className="ml-[.9px]">({getSavedNote?.length})</span></TabsTrigger>
                         <TabsTrigger value="favorite" className=" w-full lg:text-[.9rem] md:text-[.8rem] sm:text-[.7rem] text-[.65rem]" >Favorite Content  <span className="ml-[.9px]">({getFavoriteNote?.length})</span></TabsTrigger>
