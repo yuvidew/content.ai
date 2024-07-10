@@ -42,20 +42,23 @@ export const CreateContent: React.FC<Props> = ({children}) => {
     })
 
     useEffect(() => {
-        const compareObjects = (obj1: any , obj2: any): boolean => {
-            return obj1.category !== obj2.category;
+        const compareObjects = (obj1: any, obj2: any): boolean => {
+            return obj1.category === obj2.category;
         };
-
-        if(getAllNote != undefined){
-            if(getAllNote.length !== 0){
-                const uniqueElements:any = category.filter((obj1) => getAllNote.some((obj2):any => compareObjects(obj1, obj2))) 
-                setAllCategory(uniqueElements)
-            }else{
-                setAllCategory(category)
+    
+        if (getAllNote !== undefined) {
+            if (getAllNote.length !== 0) {
+                const uniqueElements: any = category.filter((obj1) =>
+                    !getAllNote.some((obj2) => compareObjects(obj1, obj2))
+                );
+                setAllCategory(uniqueElements);
+            } else {
+                setAllCategory(category);
             }
+        } else {
+            setAllCategory(category);
         }
-    } ,[getAllNote])
-    console.log("object" , getAllNote);
+    }, [getAllNote, category]);
 
 
     const create = useMutation(api.documents.create)
