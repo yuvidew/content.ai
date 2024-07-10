@@ -46,13 +46,16 @@ export const CreateContent: React.FC<Props> = ({children}) => {
             return obj1.category !== obj2.category;
         };
 
-        if(getAllNote != undefined && getAllNote.length !== 0){
-            
-            const uniqueElements:any = category.filter((obj1) => getAllNote.some((obj2):any => compareObjects(obj1, obj2))) 
-    
-            setAllCategory(uniqueElements)
+        if(getAllNote != undefined){
+            if(getAllNote.length !== 0){
+                const uniqueElements:any = category.filter((obj1) => getAllNote.some((obj2):any => compareObjects(obj1, obj2))) 
+                setAllCategory(uniqueElements)
+            }else{
+                setAllCategory(category)
+            }
         }
     } ,[getAllNote])
+    console.log("object" , getAllNote);
 
 
     const create = useMutation(api.documents.create)
@@ -98,8 +101,8 @@ export const CreateContent: React.FC<Props> = ({children}) => {
                     </SelectTrigger>
                     <SelectContent>
 
-                        {allCategory.length == 0 ? (
-                            <h3>Loading...</h3>
+                        {allCategory.length == 0  ? (
+                            <span className="text-[.9rem]">Loading...</span>
                         ): 
                         allCategory.map((ele:any , index:string):any => (
                             <SelectItem key={index} value={index.toString()}>{ele.category}</SelectItem>

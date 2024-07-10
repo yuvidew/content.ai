@@ -5,9 +5,6 @@ import { Header } from "../_components/Header";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useQuery } from "convex/react";
 
-
-
-
 export default function DashBoardHome(){
     const getAllNote = useQuery(api.documents.getNote) 
     const getSavedNote = useQuery(api.documents.getSavedNote)

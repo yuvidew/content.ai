@@ -120,7 +120,7 @@ export const AskQueryForm: React.FC<props> = ({onContent , aiPrompt , id , conte
                     htmlFor='query-about'
                     className=' text-[1rem] block mb-4 font-light opacity-75'
                 >
-                    What is about your query ? (Optional)
+                    What is about your query ?
                 </Label>
                 <Textarea 
                     id='query-about'
